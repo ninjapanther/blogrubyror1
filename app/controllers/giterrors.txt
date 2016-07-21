@@ -1,0 +1,7 @@
+ git remote add github git@github.com:ppreyer/first_app.git
+
+Remember though, everywhere in the tutorial you see "origin" you should replace it with "github". For example $ git push origin master should now be $ git push github master.
+
+However, if you want to see what that origin which already exists is, you can do a $ git remote -v. If you think this is there by some error, you can update it like so:
+
+$ git remote set-url origin git@github.com:ppreyer/first_app.git

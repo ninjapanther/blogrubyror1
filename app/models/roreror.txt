@@ -1,0 +1,5 @@
+argument error: anchors
+doreplace 
+ /^[A-Z]{3}\d{4}$/
+to
+/\A[A-Z]{3}\d{4}\z/

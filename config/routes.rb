@@ -1,9 +1,17 @@
 Blog::Application.routes.draw do
 	root :to => "articles#index"
+	
+	
   resources :articles do
   resources :comments
   end
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+  #resources :session, :only => [:new, :create, :destroy]
+  #get '/login' => "session#new", :as => "login"
+    get '/login' => "sessions#new", :as => "login"
+
+  get '/logout' => "sessions#destroy", :as => "logout"
 
 #get ':controller(/:action(/:id(.:format)))'
 
